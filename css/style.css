@@ -192,7 +192,22 @@ svg:not(:root) {
 	z-index: 0;
 }
 
+.logo-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 350px;
+	flex-shrink: 0;
+	box-sizing: border-box;
+}
 
+
+.main-logo {
+	max-height: 92px;
+	position: relative;
+	height: 100%;
+	margin-top: 25px;
+}
 
 
 .search {
