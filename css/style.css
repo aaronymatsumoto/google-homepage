@@ -15,22 +15,31 @@ button {
 	cursor: pointer;
 }
 
-a {
+header, main, footer {
+	flex-shrink: 0;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  color: #555555;
+  text-decoration:none; 
+  cursor: pointer;
+}
+
+body a {
 	text-decoration: none;
 }
 
-a:visited{
+header main a:visited{
 	text-decoration: none;
 	color: black;
 }
 
-a:hover {
+body a:hover {
 	text-decoration: underline;
 }
 
-footer {
-	color: #555555;
-	background-color: #f2f2f2;
+footer a:visited {
+  color: #555555;
 }
 
 .primary-nav {
@@ -171,3 +180,78 @@ footer {
 	border-color: #dfe1e5;
 }
 
+main {
+	flex-grow: 1;
+}
+
+header, main, footer {
+	flex-shrink: 0;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.primary-footer {
+	background-color: #f2f2f2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 100%;
+	padding: 10px 20px;
+}
+
+@media only screen and (max-width: 1200px){
+	.primary-footer {
+			justify-content: space-evenly;
+	}
+}
+
+footer .left {
+	margin: 0 8px;
+}
+
+footer .right {
+	margin: 0 8px;
+}
+
+.middle-footer {
+	order: 2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px){
+	.middle-footer {
+		order: 0;
+		width: 100%;
+		justify-content: center;
+		padding: 10px;
+	}
+}
+
+.left-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	min-width: 30%;
+	order: 1;
+}
+
+.right-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	min-width: 30%;
+	order: 3;
+}
+
+.carbon-neutral {
+	height: 14px;
+	margin-right: 6px;
+}
