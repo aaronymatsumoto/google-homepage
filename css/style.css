@@ -1,8 +1,20 @@
-/*@font-face {
-	font-family: productSans;
-	src: url(/css/fonts/Product\ Sans\ Regular.ttf);
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
-*/
+
+body{
+	font-size: 14px;
+	font-family: Roboto,arial,sans-serif;
+	color: #222
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
 a {
 	text-decoration: none;
 }
@@ -16,124 +28,55 @@ a:hover {
 	text-decoration: underline;
 }
 
-body, html {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-body, input, button {
-	font-size: 14px;
-	font-family: Roboto,arial,sans-serif;
-	color: #222
-}
-
-header, body, footer {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-
 footer {
 	color: #555555;
 	background-color: #f2f2f2;
 }
 
-div {
-	display: block;
-}
-
-header {
-	flex-shrink: 100;
-}
-
-/*
-.main {
-	font-family: productSans;
-}
-*/
-.nav-bar {
+.primary-nav {
 	display: flex;
+	flex-flow: nowrap;
+	padding: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 2px;
+}
+
+.left-nav {
+	display: flex;
+	margin-right: auto;
 	align-items: center;
-	padding: 6px;
-	height: 60px;
-	flex-shrink: 0;
-	box-sizing: border-box;
 }
 
-.nav-left:first-of-type {
-	margin-left: 15px;
-}
-
-.nav-left {
-	display: inline-block;
+.left {
 	padding: 5px;
-	margin: 0 5px;
-	color: #222;
+	margin-left: 8px;
 }
 
-.nav-right-bar {
-	display: inline-block;
-	flex-grow: 1;
-}
-
-.nav-right {
-	float: right;
-	padding-left: 32px;
-	box-sizing: border-box;
-	height: 48px;
-	line-height: normal;
-	padding: 0 4px;
-	flex: 0 0 auto;
-	vertical-align: middle;
-	white-space: nowrap;
-	-webkit-box-align: center;
-	align-items: center;
+.right-nav {
 	display: flex;
+	align-items: center;
 }
 
-.gmail-images-div {
-
-	padding-right: 15px;
-}
-
-.gmail-images {
-	display: inline-block;
-	padding-left: 15px;
-	line-height: 24px;
-}
-
-.product-full {
-	padding: 4px;
-	display: inline-block;
-	vertical-align: middle;
-	line-height: normal;
-	white-space: nowrap;
-	
+.right {
+	padding: 5px;
+	margin-left: 8px;
 }
 
 .products{
-	background-position: -64px -29px;
 	padding: 8px;
-	display: inline-block;
 	outline: none;
 	vertical-align: middle;
-	border-radius: 2px;
 	box-sizing: border-box;
 	height: 40px;
 	width: 40px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
-.products-profile {
-	float: right;
-	position: relative;
-	line-height: normal;
-	white-space: nowrap;
-	-webkit-user-select: none;
-}
-
-.products-profile:first-child {
-	padding-left: 4px;
+.products:hover {
+	border-radius: 50%;
+	background-color: #f2f2f2;
 }
 
 .dots {
@@ -142,117 +85,22 @@ header {
 	opacity: 1;
 }
 
-.products:hover {
-	border-radius: 50px;
-	background-color: #f2f2f2;
-}
 
-svg {
-	fill: currentColor;
-}
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-.profile-full {
-	padding: 4px;
-	padding-left: 2px;
-	flex: 0 1 auto;
-	display: inline-block;
+.profile-pic {
 	vertical-align: middle;
-	position: relative;
-	line-height: normal;
-	white-space: nowrap;
-	-webkit-user-select: none;
-}
-
-.profile {
-	padding: 4px;
-	flex: 0 1 auto;
-	display: inline-block;
-	vertical-align: middle;
-	border-radius: 2px;
 	box-sizing: border-box;
-	height: 40px;
-	width: 40px;
-	white-space: nowrap;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
 }
 
 .profile:hover {
-	border-radius: 60px;
+	border-radius: 50px;
 	background-color: #f2f2f2;
 }
 
-.profile-pic {
-	background-size: 32px 32px;
-	border: 0;
-	border-radius: 50px;
-	display: block;
-	margin: 0;
-	position: relative;
-	height: 32px;
-	width: 32px;
-	z-index: 0;
-}
-
-.logo-body {
+.primary-logo {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 92px;
-	max-height: 290px;
-	height: calc(100% - 560px);
-	flex-shrink: 0;
-	box-sizing: border-box;
-}
-
-.main-logo {
-	max-height: 92px;
-	position: relative;
-	height: 100%;
-	margin-top: auto;
-}
-
-
-.search-bar {
-	padding: 20px;
-	max-height: 160px;
-	flex-shrink: 0;
-	box-sizing: border-box;
-}
-
-.google-search {
-	width: auto;
-	max-width: 584px;
-	background: #fff;
-	display: flex;
-	border: 1px solid #dfe1e5;
-	box-shadow: none;
-	border-radius: 24px;
-	z-index: 3;
-	height: 44px;
-	margin: 0 auto;
-}
-
-form {
-	display: block;
-	margin-top: 0em;
-}
-
-.search {
-	background-color: #f8f9fa;
-	border: 1px solid #f8f9fa;
-	border-radius: 4px;
-	margin: 11px 4px;
-	padding: 0 16px;
-	line-height: 27px;
-	height: 36px;
-	min-width: 54px;
-	text-align: center;
-	cursor: pointer;
-}
-
-.carbon-neutral {
-	height: 1em;
+	justify-content: center;
+	margin-top: 200px;
 }
