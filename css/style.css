@@ -142,3 +142,32 @@ footer {
 	font-size: 16px;
 }
 
+.search-buttons {
+	display: flex;
+	justify-content: center;
+	height: 70px;
+	padding-top: 18px;
+	top: 53px;
+	z-index: 0;
+}
+
+.search {
+	background-color: #f8f9fa;
+	border: 1px solid #f8f9fa;
+	border-radius: 4px;
+	color: #3c4043;
+	margin: 11px 6px;
+	padding: 0 16px;
+	line-height: 27px;
+	height: 36px;
+	min-width: 54px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.search:hover {
+	border-color: #dfe1e5;
+}
+
