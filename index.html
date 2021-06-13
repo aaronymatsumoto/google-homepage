@@ -34,16 +34,23 @@
 			<div class="primary-logo">
 				<img class="logo" src="images/google-logo.png" alt="Google Logo">
 			</div>
-			<!-- google search magnifying glass -->
-			<img src="images/google-search.png">
-			<!-- search bar -->
-			<form autocomplete="off" action="/search">
-			</form>
-			<!-- google search microphone -->
-			<a href="#" onclick="return false;">
-				<img src="images/google-microphone.png" aria-label="Search by Voice" role="button">
-			</a>
 
+			<!-- search bar -->
+			<form class="searchbar" autocomplete="off">
+				<!-- google search magnifying glass -->
+				<img class="magnify" src="images/google-search.png">
+				<!-- search bar -->
+				<input class="search-input" type="text">
+				<!-- google search microphone -->
+				<a href="#" onclick="return false;">
+					<img class="mic" src="images/google-microphone.png" aria-label="Search by Voice" role="button">
+				</a>
+				<!-- Pressing Enter no longer does anything -->
+				<script type="text/javascript">
+					window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+				</script>					
+			</form>
+			
 			<!-- search buttons -->
 			<input class="search" value="Google Search" aria-label="Google Search" type="submit">
 			<input class="search" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit">
