@@ -41,35 +41,39 @@
 	<body>
 		<!-- logo -->
 		<div class="logo-body">
-			<div class="main logo">
-				<img src="images/google-logo.png" alt="Google Logo">
+			<div class="main main-logo">
+				<img class="logo" src="images/google-logo.png" alt="Google Logo">
 			</div>	
 		</div>
 		
 		<!-- search bar and buttons-->
-		<div class="main">
-			<div class="google-search">
-				<img src="images/google-search.png">
-			</div>
+
 
 			<form autocomplete="off">
 				<label for="search"></label><br>
 				<input type="text" id="search" name="search"><br>
+				<div class="main search-bar">
+					<div class="google-search">
+						<img src="images/google-search.png">
+					</div>
+				</div>
+				<div class="google-mic">
+					<a href="#" onclick="return false;">
+						<img src="images/google-microphone.png" aria-label="Search by Voice" role="button">
+					</a>
+				</div>
+		
+				<div class="search-buttons">
+					<center>
+						<input class="search" value="Google Search" aria-label="Google Search" type="submit">
+						<input class="search" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit">
+					</center>
+				</div>
+				
+
 			</form>
 
-			<div class="google-mic">
-				<a href="#" onclick="return false;">
-					<img src="images/google-microphone.png" aria-label="Search by Voice" role="button">
-				</a>
-			</div>
 
-			<div class="search-buttons">
-				<center>
-					<input class="search" value="Google Search" aria-label="Google Search" type="submit">
-					<input class="search" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit">
-				</center>
-			</div>
-		</div>
 
 		<!-- blank space between buttons and footer-->
 		<div class="main">

@@ -43,6 +43,10 @@ div {
 	display: block;
 }
 
+header {
+	flex-shrink: 100;
+}
+
 /*
 .main {
 	font-family: productSans;
@@ -196,19 +200,45 @@ svg:not(:root) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 350px;
+	min-height: 92px;
+	max-height: 290px;
+	height: calc(100% - 560px);
 	flex-shrink: 0;
 	box-sizing: border-box;
 }
-
 
 .main-logo {
 	max-height: 92px;
 	position: relative;
 	height: 100%;
-	margin-top: 25px;
+	margin-top: auto;
 }
 
+
+.search-bar {
+	padding: 20px;
+	max-height: 160px;
+	flex-shrink: 0;
+	box-sizing: border-box;
+}
+
+.google-search {
+	width: auto;
+	max-width: 584px;
+	background: #fff;
+	display: flex;
+	border: 1px solid #dfe1e5;
+	box-shadow: none;
+	border-radius: 24px;
+	z-index: 3;
+	height: 44px;
+	margin: 0 auto;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+}
 
 .search {
 	background-color: #f8f9fa;
